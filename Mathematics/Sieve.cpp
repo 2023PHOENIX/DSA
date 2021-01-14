@@ -11,7 +11,7 @@ using namespace std;
 
 
 int spf[INT_MAX];
-
+// not corent code
 void seive()
 {
   spf[1] = 1;
