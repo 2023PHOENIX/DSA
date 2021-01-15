@@ -18,4 +18,6 @@ int SumofDigit(int n)
    cout<<SumofDigit(n);
 
    // count of digit -> log10(n) + 1;
+
+   
  }
