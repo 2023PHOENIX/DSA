@@ -5,19 +5,17 @@ using namespace std;
 typedef long long int ll;
 
 
-void func(int n)
+int greyCode(int n)
 {
-  if(n==0)
-    return;
-
-  cout<<"Abhishek\n";
-
-  func(n-1);
+    return n ^ (n>>1);
 }
-
 int main()
 {
-  int n;  cin>>n;
-  func(n);
+    ios_base:: sync_with_stdio(false);
+    cin.tie(NULL);
+
+    int n;  cin>>n;
+
+    cout<<greyCode(n)<<endl;
 
 }

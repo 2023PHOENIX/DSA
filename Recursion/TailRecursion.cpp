@@ -20,7 +20,7 @@ int TailRecursion(int n,int k)
   TailRecursion(n-1,k*n);     // when we call for TailRecursion(4)
   // (4,1) -> (3,4) -> (2,12) -> (1,24) -> (0) -> it will return 24 as k
 
-
+  
 
 
 
@@ -31,5 +31,6 @@ int main()
   int n;  cin>>n;
 
   // cout<<Factorial(n);
+
   cout<<TailRecursion(n,1);
 }
