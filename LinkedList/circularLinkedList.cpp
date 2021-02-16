@@ -25,6 +25,7 @@ Node *CreateLinkedList(vector<int> v)
         last->next = temp;
         last = temp;
     }
+    last->next = head;
 
     return head;
 }
@@ -32,8 +33,10 @@ Node *CreateLinkedList(vector<int> v)
 void printLinkedList(Node *head)
 {
     Node * p = head;
+    p = p->next;
 
-    while(p)
+    cout<<head->data<<" ";
+    while(p!=head)
     {
         cout<<p->data<<" ";
         p = p-> next;

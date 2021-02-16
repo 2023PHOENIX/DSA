@@ -11,6 +11,7 @@
 		"files.associations": {
 			"ostream": "cpp",
 			"iostream": "cpp"
-		}
+		},
+		"editor.fontFamily": "Fira Code"
 	}
 }

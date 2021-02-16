@@ -39,6 +39,42 @@ void printLinkedList(Node *head)
         p = p-> next;
     }
 }
+
+Node *pairwiseSwap(Node *head)
+{
+    if(head==nullptr or head->next==nullptr)
+        return nullptr;
+
+    Node *curr = head->next->next;
+    // we need to swap in pairs 
+    Node *prev = head;
+    head = head->next;
+
+    head->next = prev;
+
+    while(curr and curr->next)
+    {
+        prev->next = curr->next;
+        // we need to store the next->next element since we 
+        // are going to break the link
+
+        Node *Next = curr->next->next;
+
+        curr->next->next = curr;
+        prev = curr;
+        curr = Next;
+
+
+    }
+
+    prev->next = curr;
+
+
+    return head;
+
+
+
+}
 int main()
 {
     int n;  cin>>n;
@@ -46,8 +82,9 @@ int main()
     for(auto &i : v)cin>>i;
 
     auto Head = CreateLinkedList(v);
-
-    printLinkedList(Head);
+    
+    auto H = pairwiseSwap(Head);
+    printLinkedList(H);
 
    
 }
