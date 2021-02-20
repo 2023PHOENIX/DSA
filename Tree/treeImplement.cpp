@@ -1,12 +1,12 @@
 const int INT_MAX = 2147483647;
 const int INT_MIN = -2147483647;
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 typedef long long int ll;
 
 class Node
 {
-    public:
+public:
     int data;
     Node *left;
     Node *right;
@@ -20,8 +20,9 @@ class Node
 
     int findHeight(Node *root);
 
+    void spiralTravesal(Node *root);
 };
-Node :: Node(int data)
+Node ::Node(int data)
 {
     this->data = data;
     this->left = nullptr;
@@ -29,49 +30,91 @@ Node :: Node(int data)
 }
 void Node::Preorder(Node *root)
 {
-    if(root==nullptr)
+    if (root == nullptr)
         return;
-    
-    cout<<root->data<<" ";
+
+    cout << root->data << " ";
     Preorder(root->left);
-    
+
     Preorder(root->right);
 }
 
-void Node:: Inorder(Node *root)
+void Node::Inorder(Node *root)
 {
-    if(root==nullptr)
+    if (root == nullptr)
         return;
-    
+
     Inorder(root->left);
-    cout<<root->data<<" ";
+    cout << root->data << " ";
     Inorder(root->right);
 }
 
-void Node :: PostOrder(Node * root)
+void Node ::PostOrder(Node *root)
 {
-    if(root==nullptr)
+    if (root == nullptr)
         return;
-    
+
     PostOrder(root->left);
     PostOrder(root->right);
-    cout<<root->data<<" ";
-
+    cout << root->data << " ";
 }
 
-int Node :: findHeight(Node *root)
+int Node ::findHeight(Node *root)
 {
-    if(root==nullptr)
+    if (root == nullptr)
         return 0;
 
-    return max(findHeight(root->left),findHeight(root->right))+1;
+    return max(findHeight(root->left), findHeight(root->right)) + 1;
+}
+
+void Node::spiralTravesal(Node *root)
+{
+    if (!root)
+        return;
+
+    int flag = 1;
+
+    
+
+    queue<Node *> qu;
+
+    qu.push(root);
+
+    while (qu.size() > 0)
+    {
+        vector<int> v;
+        int count = qu.size();
+
+        for (int i = 0; i < count; i++)
+        {
+            Node *curr = qu.front();
+
+            qu.pop();
+
+            v.push_back(curr->data);
+
+            if (curr->left)
+                qu.push(curr->left);
+            if (curr->right)
+                qu.push(curr->right);
+        }
+
+
+        if (flag % 2 == 1)
+            reverse(v.begin(), v.end());
+
+        for (auto &i : v)
+            cout << i << " ";
+
+        flag++;
+    }
 }
 
 int main()
 {
-    ios_base:: sync_with_stdio(false);
+    ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    
+
     Node *head = new Node(12);
     head->left = new Node(13);
     head->right = new Node(29);
@@ -80,16 +123,5 @@ int main()
     head->left->left = new Node(36);
     head->right->right = new Node(100);
 
-
-    head->Inorder(head);
-    cout<<endl;
-    head->Preorder(head);
-    cout<<endl;
-    head->PostOrder(head);
-    cout<<endl;
-
-
-    cout<<head->findHeight(head);
-
-    
+    head->spiralTravesal(head);
 }
