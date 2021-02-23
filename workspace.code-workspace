@@ -5,6 +5,12 @@
 		},
 		{
 			"path": "."
+		},
+		{
+			"path": "../FRONT_END"
+		},
+		{
+			"path": "../500075340"
 		}
 	],
 	"settings": {
@@ -12,6 +18,10 @@
 			"ostream": "cpp",
 			"iostream": "cpp"
 		},
-		"editor.fontFamily": "Fira Code"
+		"editor.fontFamily": "Fira Code",
+		"workbench.colorTheme": "GitHub Dark",
+		"liveServer.settings.multiRootWorkspaceName": "FRONT_END",
+		"workbench.iconTheme": "eq-material-theme-icons-ocean",
+		"workbench.productIconTheme": "material-product-icons"
 	}
 }
