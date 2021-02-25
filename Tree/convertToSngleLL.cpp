@@ -1,29 +1,30 @@
 const int INT_MAX = 2147483647;
 const int INT_MIN = -2147483647;
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 typedef long long int ll;
 
 class TreeNode
 {
-public:
-    int data;
-    TreeNode *left;
-    TreeNode *right;
-
+    public:
+        int data;
+        TreeNode *left;
+        TreeNode *right;
+    
     TreeNode(int data)
     {
         this->data = data;
         left = nullptr;
         right = nullptr;
     }
+
 };
 
 class Node
 {
-public:
-    int data;
-    Node *next;
+    public: 
+        int data;
+        Node *next;
 
     Node(int data)
     {
@@ -32,48 +33,56 @@ public:
     }
 };
 
-void convertTotree(Node *head, TreeNode *&root)
-{
-    if (!head)
-        root = nullptr;
 
-    queue<TreeNode *> qu;
+void convert(Node *head,TreeNode *&root)
+{
+ 
+    /// convert from linked list to binary tree
+
+    queue<TreeNode*> qu;
 
     root = new TreeNode(head->data);
     qu.push(root);
 
-    head = head->next;
 
-    while (head)
+    while(qu.size()>0)
     {
-        TreeNode *parent = qu.front();
+        TreeNode * curr = qu.front();
 
-        TreeNode *leftchild{nullptr}, *rightchild{nullptr};
+        qu.pop();
 
-        leftchild = new TreeNode(head->data);
-        qu.push(leftchild);
-        head = head->next;
-
-        if (head)
-        {
-            rightchild = new TreeNode(head->data);
-            qu.push(rightchild);
-            head = head->next;
-        }
-
-        parent->left = leftchild;
-        parent->right = rightchild;
+        if(head)
+            {
+                head = 
+            }
     }
 }
 
+
 int main()
 {
-    ios_base::sync_with_stdio(false);
+    ios_base:: sync_with_stdio(false);
     cin.tie(NULL);
 
-    Node *head = new Node(10);
-    head->next = new Node(12);
-    head->next->next = new Node(15);
-    head->next->next = new Node(25);
-    head->next->next->next = new Node(36);
+    TreeNode *root = new TreeNode(10);
+    root->left = new TreeNode(20);
+    root->right = new TreeNode(30);
+
+    root->left->left = new TreeNode(40);
+    root->left->right = new TreeNode(50);
+
+
+    Node *head = nullptr;
+    convert(head,root);
+
+
+    while(head)
+    {
+        cout<<head->data<<" ";
+
+        head = head->next;
+    }
+
+
+    
 }
