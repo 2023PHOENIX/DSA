@@ -1,0 +1,1 @@
+{"name":"Local: Heap","url":"/home/abhishek/Documents/DSA/Heap/Heap.cpp","tests":[{"id":1615274610180,"input":"6\n20 10 15 40 18 30","output":""},{"id":1615274678645,"input":"9\n200 100 2 4 8 6 5 9 10","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/abhishek/Documents/DSA/Heap/Heap.cpp","group":"local","local":true}

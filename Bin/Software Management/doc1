@@ -1,0 +1,36 @@
+q1 :  Evolutionary Development, Spiral and RAD software life cycle model based on characteristics of requirements.
+
+Answer 1 : 
+
+	we are going to compare model on the basic of 
+	1. Correctness
+	2. Completeness
+	3. Consistency
+	4. Unambiguosness
+	5. Ranking of importance and stabilty
+	6. Modifiability
+	7. Verifiablity
+	8. Traceabilty
+	9. Design dependency
+	10. Testability 
+	11. Underestandable by customer
+	12. Right level of abstraction
+
+
+	1. WaterFall Model : 
+		It is easy to use and used in small projects. 
+		It require planning in early stage.
+		Detailed documents are required. 
+		Maintenace is least.
+		Felixiblity to change is very difficult.
+		User involement is least only required in the begining of project
+		Testing is possible afer completion of coding phase.
+		Design dependency is very high.
+		Re-usabllity is very low.
+		Time frame is very high.
+		Cost is low as compare to other models.
+		Hard for customer to understand in begining.
+		It not useable in real life projects
+	2. Iterative Enhancement Model:
+		This model is same as Waterfall model but with some restriction. Genera	lly 
+

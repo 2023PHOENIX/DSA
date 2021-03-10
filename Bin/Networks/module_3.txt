@@ -1,0 +1,75 @@
+The Rules of COmmunications Fundamentals:
+	there are threee elements of any communication :
+		1. There will be a source.
+		2. There will be a destination.
+		3. There will ne a channl that provide for the path of communicatin to occur.
+
+All communication are governed by protocols.
+
+
+The Rules of Network Protocol Requirement
+	common computer protocols must be in agreement include the following requirements:
+		1. Messege encoding 
+		2. Message formatting and encapsulation
+		3. Message size
+		3. Message delivery Options.
+
+1. Messege Encoding : 
+	Encoding is the process of converting information into another acceptable transmission.
+	Decoding is process to convert acceptable transmission to information that is readable by user.
+
+2. Messege Formatting :
+	If some message is sent it must be use a specific formate or structure.
+	Message format depend on the type of message and the channel that deliver the messege.
+
+3. Message Size : 
+	Message sent across the network are converted to bits.
+	The bits are encoded into pattern of light,sound,or electrical impulses.
+	The reciver host must decode the signals to intercept the message.
+
+4. Messege Timming : 
+	Flow Control : manage the rate of data transmission and defines how much information can be sent and the speed at which it can be delivered.
+
+	Respone timeout : Manages how long a device waits when it does not a hear a reply from the destination.
+
+5. Messege Delivery Options 
+	Unicast : one to one communication.
+
+	Multicast : One to many.
+
+	BroadCast : One to all.
+
+
+
+Network Protocols define a common set of rules 
+	-> Can be implemented on devices in : 
+		. software
+		. Hardware
+		. Both
+	-> Protocols have their own
+		. Function
+		. Format
+		. Rules
+
+Protocol InterAction : 
+	Network require to use of several protocol.
+		like HTTP,TCD,IP,Ethernet.
+
+
+Protocol suites :
+	Able to work with other protocols.
+
+	protocol suite : 
+		1. A group of inter-related protocols necessary to perform a communication function
+		2. Set of rules that work to help solve a problem.
+
+
+
+	In term of Layer : 
+		Higher Layer.
+		Lower Layer
+
+		Some of the protocol suites 
+		1. Internet Protocol Suite(TCP/IP)
+		2. Open System  Interconnection (OSI)
+		3. Novell NetWare

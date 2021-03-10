@@ -1,0 +1,35 @@
+
+
+
+
+void vTravesal(Node *root)
+{
+    map<int,list<int>> mp;
+
+    queue < pair< Node *, int >> qu;
+
+    qu.push({root,0});
+
+
+    while(!qu.empty())
+    {
+        auto P = qu.front();
+
+        Node *curr = P.first;
+
+        int hd = P.second;
+
+
+        mp[hd].push(curr->data);
+
+        
+        if(curr->left)
+            q.push({curr->left,hd-1});
+        else
+            q.push({curr->right,hd+1});
+        
+        
+    }
+
+
+}

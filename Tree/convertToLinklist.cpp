@@ -14,7 +14,7 @@ class Node
 
     Node(int data);
     
-       
+    
 };
 Node :: Node(int data)
 {
