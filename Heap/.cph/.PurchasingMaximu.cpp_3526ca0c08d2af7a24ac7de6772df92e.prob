@@ -1,0 +1,1 @@
+{"name":"Local: PurchasingMaximu","url":"/home/abhishek/Documents/DSA/Heap/PurchasingMaximu.cpp","tests":[{"id":1615365178568,"input":"5 10\n1 12 5 111 200","output":"2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/abhishek/Documents/DSA/Heap/PurchasingMaximu.cpp","group":"local","local":true}
